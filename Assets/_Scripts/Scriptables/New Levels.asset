@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebbc2bb6027bfb041976b4f77b10b9a5, type: 3}
+  m_Name: New Levels
+  m_EditorClassIdentifier: 
+  levelsDetail:
+  - levelPrefab: {fileID: 6656276044648894775, guid: d5ea8e3f0ce95f64186b95001321129e, type: 3}
+    coinsReward: 500
+    timeLimit: 100
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 3683121317058301393, guid: 020fcbffad0bf70409b2583e3fe4cdf4, type: 3}
+    coinsReward: 500
+    timeLimit: 140
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 6082076722367500606, guid: 05f52931d62245648a551a3de2fe610b, type: 3}
+    coinsReward: 800
+    timeLimit: 140
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 3202303509487602236, guid: 504e7b554801b534b9aa3eac36b59d3b, type: 3}
+    coinsReward: 500
+    timeLimit: 140
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 1601363164669928991, guid: 2105733f2af11dc4483fdb2cd6c547b5, type: 3}
+    coinsReward: 500
+    timeLimit: 140
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 7311983993433337171, guid: ef0b4736b3587a74797802927d5aa496, type: 3}
+    coinsReward: 800
+    timeLimit: 140
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 8030279117133979350, guid: 44d67441fcf9baf4aa3f848017355486, type: 3}
+    coinsReward: 800
+    timeLimit: 140
+    spawnPoint: {fileID: 7089011429642060780, guid: 23f006018a24fb84da21393fafad8755, type: 3}
+  - levelPrefab: {fileID: 7506797036865138401, guid: 36559a268c60f274682061ba472a5bbd, type: 3}
+    coinsReward: 800
+    timeLimit: 140
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 3030932849311686569, guid: fad70dad45df82a41a4f94149fdfad8a, type: 3}
+    coinsReward: 800
+    timeLimit: 210
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 7423568140970904900, guid: e95a6e84181e7cc4e8f18ed572e49d34, type: 3}
+    coinsReward: 800
+    timeLimit: 150
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 4045106013215983025, guid: 07efa5afd461bcd4abad0a41767be719, type: 3}
+    coinsReward: 1000
+    timeLimit: 150
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 5830694723224477764, guid: ca324d0997383794b8a061a38970f10e, type: 3}
+    coinsReward: 1000
+    timeLimit: 150
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 8047183132141613578, guid: 6109dfa41b336d24a8965076186bb85d, type: 3}
+    coinsReward: 1000
+    timeLimit: 150
+    spawnPoint: {fileID: 7089011429642060780, guid: 23f006018a24fb84da21393fafad8755, type: 3}
+  - levelPrefab: {fileID: 6698191342459156850, guid: 285709fd7c7c0fe4c9646a9cf4ce4508, type: 3}
+    coinsReward: 1000
+    timeLimit: 150
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 2348284778581786245, guid: ae6ef940ae2044e4ca43441668628c10, type: 3}
+    coinsReward: 1000
+    timeLimit: 150
+    spawnPoint: {fileID: 7089011429642060780, guid: 23f006018a24fb84da21393fafad8755, type: 3}
+  - levelPrefab: {fileID: 261035835129798961, guid: d0d6775c0cd4ec9448a6cd268a2dcb83, type: 3}
+    coinsReward: 1500
+    timeLimit: 150
+    spawnPoint: {fileID: 6248937613189674027, guid: d2671f30b4ff8304e809bb1d7ebdbfee, type: 3}
+  - levelPrefab: {fileID: 2675873860777150261, guid: 6cf738b797041684c82d2e66161ebc14, type: 3}
+    coinsReward: 1500
+    timeLimit: 150
+    spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
+  - levelPrefab: {fileID: 2405366595822586300, guid: ccf2648a729811f478db4f3be700acfb, type: 3}
+    coinsReward: 1700
+    timeLimit: 150
+    spawnPoint: {fileID: 6248937613189674027, guid: d2671f30b4ff8304e809bb1d7ebdbfee, type: 3}
+  - levelPrefab: {fileID: 7423568140970904900, guid: ef31f5fc9af2f0f4daab3c5a2ca18a88, type: 3}
+    coinsReward: 1800
+    timeLimit: 150
+    spawnPoint: {fileID: 7089011429642060780, guid: 23f006018a24fb84da21393fafad8755, type: 3}
+  - levelPrefab: {fileID: 8030279117133979350, guid: 4d26a2551e84b2d4eb9ba6409bff5a8f, type: 3}
+    coinsReward: 2000
+    timeLimit: 150
+    spawnPoint: {fileID: 7089011429642060780, guid: 23f006018a24fb84da21393fafad8755, type: 3}
+  carsDetail:
+  - carPrefab: {fileID: 510463804050932084, guid: 6f51296f732a19140bf39051f7b013f9, type: 3}
+    ID: 0
+    price: 0
+    requiredLevel: 0
+    isUnlocked: 1
+  - carPrefab: {fileID: 1176924995962296200, guid: 17c2b4233fb5dc6489a10f00ac0ce195, type: 3}
+    ID: 1
+    price: 4000
+    requiredLevel: 0
+    isUnlocked: 0
+  - carPrefab: {fileID: 7609035620833402834, guid: 857bde60ede02864bab0f547229596b2, type: 3}
+    ID: 2
+    price: 10000
+    requiredLevel: 0
+    isUnlocked: 0
