@@ -15,11 +15,11 @@ MonoBehaviour:
   levelsDetail:
   - levelPrefab: {fileID: 6656276044648894775, guid: d5ea8e3f0ce95f64186b95001321129e, type: 3}
     coinsReward: 500
-    timeLimit: 100
+    timeLimit: 90
     spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
   - levelPrefab: {fileID: 3683121317058301393, guid: 020fcbffad0bf70409b2583e3fe4cdf4, type: 3}
     coinsReward: 500
-    timeLimit: 140
+    timeLimit: 80
     spawnPoint: {fileID: 1805584429095849335, guid: b07760dd19e946145bb4dcbef0f64076, type: 3}
   - levelPrefab: {fileID: 6082076722367500606, guid: 05f52931d62245648a551a3de2fe610b, type: 3}
     coinsReward: 800
@@ -108,4 +108,4 @@ MonoBehaviour:
     ID: 2
     price: 10000
     requiredLevel: 0
-    isUnlocked: 0
+    isUnlocked: 1

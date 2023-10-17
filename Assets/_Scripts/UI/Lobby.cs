@@ -19,6 +19,7 @@ public class Lobby : MonoBehaviour
     private void Awake()
     {
         i = this;
+        GameController.state = GameState.Waiting;
     }
 
     private void Start()
@@ -50,10 +51,10 @@ public class Lobby : MonoBehaviour
 
     public void CoinRewardOnWatchAd()
     {
-        if (AdsManager.i.ShowRewardedAd())
-        {
-            RewardsManager.UpdateReward(Random.Range(100, 500));
+        //if (AdsManager.i.ShowRewardedAd())
+        //{
+            RewardsManager.UpdateReward(Random.Range(300, 500));
             RefreshCoinsText();
-        }
+        //}
     }
 }

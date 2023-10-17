@@ -15,12 +15,14 @@ public class GameController : MonoBehaviour
     GameObject currentCarObj;  // current active (spawned) vehicle
     internal GameObject currentPerson; // current person that player have to pick up
     [SerializeField] GameObject[] dropPoints;
-    internal static bool levelCompleted;
+    internal static GameState state;
 
     private void Awake()
     {
         i = this;
-        levelCompleted = false;
+        //levelCompleted = false;
+        state = GameState.Playing;
+
         LevelsDetail selectedLevelDetails;
         selectedLevelDetails = levels.levelsDetail[LevelSelector.selectedLevel];
         currentLevelObj =  Instantiate(selectedLevelDetails.levelPrefab);
@@ -134,7 +136,7 @@ public class GameController : MonoBehaviour
     {
         Siren.sirenAudio.Stop();
         UIController.i.ActivateLevelCompletePanel();
-        levelCompleted = true;
+        state = GameState.LevelComplete;
         if (LevelSelector.selectedLevel >= LevelSelector.currentLevel)
         {
             UIController.i.UpdateRewardText(levels.levelsDetail[LevelSelector.selectedLevel].coinsReward);
@@ -146,15 +148,14 @@ public class GameController : MonoBehaviour
 
     public void DoubleReward()
     {
-        if (AdsManager.i.ShowRewardedAd())
-        {
-            UIController.i.OnDoubleRewardAdSuccessfullyPlayed();
-            if(LevelSelector.selectedLevel >= LevelSelector.currentLevel)
+        //if (AdsManager.i.ShowRewardedAd())
+        //{
+            if (LevelSelector.selectedLevel >= LevelSelector.currentLevel)
             {
                 RewardsManager.UpdateReward(levels.levelsDetail[LevelSelector.selectedLevel].coinsReward);
                 UIController.i.UpdateRewardText(levels.levelsDetail[LevelSelector.selectedLevel].coinsReward * 2);
             }
-        }
+        //}
     }
 
     ///////////////////////////////
@@ -163,22 +164,31 @@ public class GameController : MonoBehaviour
 
     public void OnGameOver()
     {
+        state = GameState.GameOver;
         Siren.ActiveSiren(false);
-        UIController.i.SetGameOverPanelState(true);
+        UIController.i.ActiveGameOverPanel(true);
         Ambulance.i.ToggleVehicleKinematicState();
         AdsManager.i.ShowInterstitial();
     }
 
-    public void ShowAdOnContinueGame()
+    public void ContinueGameAfterGameOver()
     {
+        state = GameState.Playing;
         Siren.ActiveSiren(true);
-        // when player clicks on "continue" button to continue level after game over
-        if (AdsManager.i.ShowRewardedAd())
-        {
-
-            UIController.i.SetGameOverPanelState(false);
+        // called when rewarded-inter ad is successfully closed
+        //if (AdsManager.i.ShowRewardedAd())
+        //{
+            UIController.i.ActiveGameOverPanel(false);
             Ambulance.i.ToggleVehicleKinematicState();
             SetTimer();
-        }
+        //}
     }
+}
+
+public enum GameState
+{
+    Waiting,
+    Playing,
+    GameOver,
+    LevelComplete
 }

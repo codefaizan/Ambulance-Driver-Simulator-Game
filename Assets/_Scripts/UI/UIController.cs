@@ -9,7 +9,6 @@ public class UIController : MonoBehaviour
 {
     [SerializeField] GameObject doorOpenBtn;
     [SerializeField] GameObject doorCloseBtn;
-    [SerializeField] Button doubleRewardBtn;
     [SerializeField] GameObject nextLevelBtn;
     [SerializeField] GameObject instructionsPanel;
     [SerializeField] GameObject levelCompletePanel;
@@ -19,6 +18,7 @@ public class UIController : MonoBehaviour
     [SerializeField] Text passengerCounter;
     [SerializeField] Animator screenFade;
     [SerializeField] GameObject pausePanel;
+    [SerializeField] internal GameObject popupRewardPanel; // rewarded interstitial AD panel
     public static UIController i;
 
     private void Awake()
@@ -33,6 +33,8 @@ public class UIController : MonoBehaviour
         levelCompletePanel.SetActive(false);
         loadingPanel.SetActive(false);
         pausePanel.SetActive(false);
+        popupRewardPanel.SetActive(false);
+        gameOverPanel.SetActive(false);
         if(PlayerPrefs.GetInt("first play", 1) == 0)
         {
             instructionsPanel.SetActive(false);
@@ -74,6 +76,7 @@ public class UIController : MonoBehaviour
     internal void ActivateLevelCompletePanel()
     {
         levelCompletePanel.SetActive(true);
+        Invoke("ActivePopupRewardPanel", 1.5f);
     }
 
     internal void UpdateRewardText(int coinsReward)
@@ -83,7 +86,7 @@ public class UIController : MonoBehaviour
 
     public void Reload()
     {
-        if (GameController.levelCompleted)
+        if (GameController.state == GameState.LevelComplete)
         {
             if (LevelSelector.currentLevel >= GameController.i.levels.levelsDetail.Length-1)
             {
@@ -111,14 +114,16 @@ public class UIController : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void SetGameOverPanelState(bool state)
+    public void ActiveGameOverPanel(bool state)
     {
         gameOverPanel.SetActive(state);
+        if(state)
+            Invoke("ActivePopupRewardPanel", 0.7f);
     }
 
-    internal void OnDoubleRewardAdSuccessfullyPlayed()
+    public void ActivePopupRewardPanel()
     {
-        doubleRewardBtn.interactable = false;
+        popupRewardPanel.SetActive(true);
     }
 
     public void LoadMainMenuScene()

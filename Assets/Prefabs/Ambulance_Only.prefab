@@ -44,8 +44,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.45314962
   m_SuspensionSpring:
-    spring: 40000
-    damper: 1500
+    spring: 30000
+    damper: 800
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
   m_ForceAppPointDistance: 0
@@ -437,8 +437,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.45314962
   m_SuspensionSpring:
-    spring: 40000
-    damper: 1500
+    spring: 30000
+    damper: 800
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
   m_ForceAppPointDistance: 0
@@ -1522,8 +1522,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.45314962
   m_SuspensionSpring:
-    spring: 40000
-    damper: 1500
+    spring: 30000
+    damper: 800
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
   m_ForceAppPointDistance: 0
@@ -1734,8 +1734,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.45314962
   m_SuspensionSpring:
-    spring: 40000
-    damper: 1500
+    spring: 30000
+    damper: 800
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
   m_ForceAppPointDistance: 0
@@ -1918,7 +1918,7 @@ MonoBehaviour:
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 1
   externalController: 0
-  steeringType: 0
+  steeringType: 1
   steerAngleCurve:
     serializedVersion: 2
     m_Curve:
@@ -1954,9 +1954,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   steerAngle: 40
   highspeedsteerAngle: 5
-  highspeedsteerAngleAtspeed: 120
-  antiRollFrontHorizontal: 1000
-  antiRollRearHorizontal: 1000
+  highspeedsteerAngleAtspeed: 80
+  antiRollFrontHorizontal: 500
+  antiRollRearHorizontal: 500
   antiRollVertical: 0
   COM: {fileID: 3637519552604501904}
   brakeTorque: 5000

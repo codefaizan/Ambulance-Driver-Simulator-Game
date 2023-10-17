@@ -188,7 +188,7 @@ public class Timer : MonoBehaviour
 
     private void CountDown()
     {
-        if (GameController.levelCompleted)
+        if (GameController.state == GameState.LevelComplete)
             return;
         /*If you choose to edit this back to 0 for 100% accuracy,
         1 frame at the end of the timer will display maximum numbers as it takes time to switch to the else statement

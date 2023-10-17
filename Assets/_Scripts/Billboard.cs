@@ -11,7 +11,7 @@ public class Billboard : MonoBehaviour
 
     IEnumerator LookAtCamera()
     {
-        while (!GameController.levelCompleted)
+        while (GameController.state != GameState.LevelComplete)
         {
             if(Vector3.Distance(transform.position, Camera.main.transform.position) < 30f)
                 transform.LookAt(Camera.main.transform);
